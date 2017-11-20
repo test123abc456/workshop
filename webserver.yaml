@@ -1,0 +1,14 @@
+---
+- name: webserver
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: install webserver
+      apt:
+        update_cache: yes
+		name: apache2
+		state: latest
+    - name: apache2 autostart
+	  service:
+	    state: started
+		enabled: yes
