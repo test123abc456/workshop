@@ -7,4 +7,4 @@
         name: "change led color"
         state: present
         user: pi
-        job: "arr[0]="red";arr[1]="blue";arr[2]="green";rand=$[ $RANDOM % 3 ];/usr/bin/rgb ${arr[$rand]}"
+        job: "arr[0]=red;arr[1]=blue;arr[2]=green;rand=$[ $RANDOM % 3 ];/usr/bin/rgb ${arr[$rand]}"
